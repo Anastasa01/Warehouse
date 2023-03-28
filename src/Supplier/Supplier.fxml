@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Supplier.SupplierController">
+   <children>
+      <Button fx:id="MainButton" layoutX="26.0" layoutY="29.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" text="&lt;&lt;&lt;">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Button>
+      <TableView fx:id="SupplierTable" layoutX="29.0" layoutY="90.0" prefHeight="250.0" prefWidth="890.0">
+        <columns>
+          <TableColumn fx:id="ColumnId" prefWidth="110.0" text="Идентификатор" />
+          <TableColumn fx:id="ColumnName" prefWidth="120.0" text="Имя" />
+            <TableColumn fx:id="ColumnSurname" prefWidth="120.0" text="Фамилия" />
+            <TableColumn fx:id="ColumnPatronymic" prefWidth="120.0" text="Отчество" />
+            <TableColumn fx:id="ColumnCompany" prefWidth="150.0" text="Компания" />
+            <TableColumn fx:id="ColumnAddress" prefWidth="150.0" text="Адрес" />
+            <TableColumn fx:id="ColumnTelephone" prefWidth="120.0" text="Телефон" />
+        </columns>
+      </TableView>
+      <TextField fx:id="NameTextField" layoutX="28.0" layoutY="380.0" prefHeight="25.0" prefWidth="120.0">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="29.0" layoutY="364.0" text="Имя">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="SurnameTextField" layoutX="164.0" layoutY="380.0" prefHeight="25.0" prefWidth="120.0">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="165.0" layoutY="364.0" text="Фамилия">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="PatronymicTextField" layoutX="301.0" layoutY="380.0" prefHeight="25.0" prefWidth="120.0">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="301.0" layoutY="364.0" text="Отчество">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="CompanyTextField" layoutX="438.0" layoutY="380.0" prefHeight="25.0" prefWidth="150.0">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="439.0" layoutY="364.0" text="Компания">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="AddressTextField" layoutX="606.0" layoutY="380.0" prefHeight="25.0" prefWidth="150.0">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="606.0" layoutY="364.0" text="Адрес">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="TelephoneTextField" layoutX="775.0" layoutY="380.0" prefHeight="25.0" prefWidth="120.0">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="775.0" layoutY="364.0" text="Телефон">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="AddButton" layoutX="29.0" layoutY="441.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="80.0" text="Добавить">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="DeleteButton" layoutX="839.0" layoutY="441.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Удалить">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="DeleteIdTextField" layoutX="798.0" layoutY="441.0" prefHeight="25.0" prefWidth="40.0">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="FindButton" layoutX="839.0" layoutY="29.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Найти">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="FindTextField" layoutX="688.0" layoutY="29.0" prefHeight="25.0" prefWidth="150.0">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="ResetButton" layoutX="530.0" layoutY="29.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Сбросить поиск">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="688.0" layoutY="13.0" text="Поиск по компании">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

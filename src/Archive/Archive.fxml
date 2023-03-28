@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="694.0" prefWidth="806.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Archive.ArchiveController">
+   <children>
+      <Button fx:id="MainButton" layoutX="23.0" layoutY="23.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" text="&lt;&lt;&lt;">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Button>
+      <TableView fx:id="ArchiveReceiptInvoiceTable" layoutX="23.0" layoutY="95.0" prefHeight="200.0" prefWidth="610.0">
+         <columns>
+            <TableColumn fx:id="ColumnIdReceiptInvoice" prefWidth="110.0" text="Идентификатор" />
+            <TableColumn fx:id="ColumnSupplierReceiptInvoice" prefWidth="150.0" text="Поставщик" />
+            <TableColumn fx:id="ColumnProductReceiptInvoice" prefWidth="150.0" text="Товар" />
+            <TableColumn fx:id="ColumnPriceReceiptInvoice" prefWidth="100.0" text="Стоимость" />
+            <TableColumn fx:id="ColumnDateReceiptInvoice" prefWidth="100.0" text="Дата" />
+         </columns>
+      </TableView>
+      <Label layoutX="23.0" layoutY="71.0" text="Приходные накладные">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="ArchiveExpenditureInvoiceTable" layoutX="20.0" layoutY="409.0" prefHeight="200.0" prefWidth="610.0">
+         <columns>
+            <TableColumn fx:id="ColumnIdExpenditureInvoice" prefWidth="110.0" text="Идентификатор" />
+            <TableColumn fx:id="ColumnBuyerExpenditureInvoice" prefWidth="150.0" text="Покупатель" />
+            <TableColumn fx:id="ColumnProductExpenditureInvoice" prefWidth="150.0" text="Товар" />
+            <TableColumn fx:id="ColumnPriceExpenditureInvoice" prefWidth="100.0" text="Стоимость" />
+            <TableColumn fx:id="ColumnDateExpenditureInvoice" prefWidth="100.0" text="Дата" />
+         </columns>
+      </TableView>
+      <Label layoutX="20.0" layoutY="384.0" text="Расходные накладные">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="DeleteArchiveReceiptInvoiceButton" layoutX="554.0" layoutY="326.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Удалить">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="DeleteIdArchiveReceiptInvoiceTextField" layoutX="513.0" layoutY="326.0" prefHeight="25.0" prefWidth="40.0">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="DeleteArchiveExpenditureInvoiceButton" layoutX="550.0" layoutY="639.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Удалить">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="DeleteIdArchiveExpenditureInvoiceTextField" layoutX="509.0" layoutY="639.0" prefHeight="25.0" prefWidth="40.0">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </TextField>
+      <RadioButton fx:id="RadioButtonReceiptInvoicePriceMore" layoutX="658.0" layoutY="141.0" mnemonicParsing="false" text="по убыванию">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="ToggleGroupReceiptInvoice" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="RadioButtonReceiptInvoicePriceLess" layoutX="658.0" layoutY="166.0" mnemonicParsing="false" text="по возрастанию" toggleGroup="$ToggleGroupReceiptInvoice">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </RadioButton>
+      <Label layoutX="658.0" layoutY="110.0" text="Сортировка по цене">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="RadioButtonReceiptInvoiceDateMore" layoutX="658.0" layoutY="232.0" mnemonicParsing="false" text="по убыванию" toggleGroup="$ToggleGroupReceiptInvoice">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="RadioButtonReceiptInvoiceDateLess" layoutX="658.0" layoutY="257.0" mnemonicParsing="false" text="по возрастанию" toggleGroup="$ToggleGroupReceiptInvoice">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </RadioButton>
+      <Label layoutX="658.0" layoutY="201.0" text="Сортировка по дате">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="ResetArchiveReceiptInvoiceButton" layoutX="23.0" layoutY="326.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="Сбросить сортировку">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Button>
+      <RadioButton fx:id="RadioButtonExpenditureInvoicePriceMore" layoutX="651.0" layoutY="459.0" mnemonicParsing="false" text="по убыванию">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="ToggleGroupExpenditureInvoice" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="RadioButtonExpenditureInvoicePriceLess" layoutX="651.0" layoutY="484.0" mnemonicParsing="false" text="по возрастанию" toggleGroup="$ToggleGroupExpenditureInvoice">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </RadioButton>
+      <Label layoutX="651.0" layoutY="428.0" text="Сортировка по цене">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="RadioButtonExpenditureInvoiceDateMore" layoutX="651.0" layoutY="550.0" mnemonicParsing="false" text="по убыванию" toggleGroup="$ToggleGroupExpenditureInvoice">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="RadioButtonExpenditureInvoiceDateLess" layoutX="651.0" layoutY="575.0" mnemonicParsing="false" text="по возрастанию" toggleGroup="$ToggleGroupExpenditureInvoice">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </RadioButton>
+      <Label layoutX="651.0" layoutY="519.0" text="Сортировка по дате">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="ResetArchiveExpenditureInvoiceButton" layoutX="23.0" layoutY="639.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="Сбросить сортировку">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

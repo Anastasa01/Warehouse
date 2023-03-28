@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ReceiptInvoice.ReceiptInvoiceController">
+   <children>
+      <Button fx:id="MainButton" layoutX="24.0" layoutY="30.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" text="&lt;&lt;&lt;">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Button>
+      <TableView fx:id="ReceiptInvoiceTable" layoutX="24.0" layoutY="88.0" prefHeight="250.0" prefWidth="610.0">
+         <columns>
+            <TableColumn fx:id="ColumnId" prefWidth="110.0" text="Идентификатор" />
+            <TableColumn fx:id="ColumnSupplier" prefWidth="150.0" text="Поставщик" />
+            <TableColumn fx:id="ColumnProduct" prefWidth="150.0" text="Товар" />
+            <TableColumn fx:id="ColumnPrice" prefWidth="100.0" text="Стоимость" />
+            <TableColumn fx:id="ColumnDate" prefWidth="100.0" text="Дата" />
+         </columns>
+      </TableView>
+      <Label layoutX="24.0" layoutY="366.0" text="Поставщик">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="194.0" layoutY="366.0" text="Товар">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="PriceTextField" layoutX="363.0" layoutY="381.0" prefHeight="25.0" prefWidth="100.0">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="363.0" layoutY="366.0" text="Сумма">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="504.0" layoutY="366.0" text="Дата">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="AddButton" layoutX="24.0" layoutY="442.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Добавить">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="SupplierComboBox" layoutX="24.0" layoutY="381.0" prefWidth="150.0" />
+      <ComboBox fx:id="WarehouseComboBox" layoutX="194.0" layoutY="381.0" prefWidth="150.0" />
+      <DatePicker fx:id="DatePickerReceiptInvoice" editable="false" layoutX="504.0" layoutY="381.0" prefWidth="100.0" />
+      <Label layoutX="465.0" layoutY="386.0" text="руб.">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
